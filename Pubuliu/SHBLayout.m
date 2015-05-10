@@ -43,7 +43,8 @@
 - (UICollectionViewLayoutAttributes *)layoutAttributesForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewLayoutAttributes *att = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
  
-    CGSize size = [self.delegate itemSizeInIndexPath:indexPath];
+    CGSize size = [self
+                   .delegate itemSizeCollectionView:self.collectionView indexPath:indexPath];
 
     if (maxX + _listSpace + size.width < WIDTH - _padding.right) {
         if (maxX == 0) {

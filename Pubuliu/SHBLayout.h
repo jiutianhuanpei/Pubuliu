@@ -10,7 +10,16 @@
 
 @protocol SHBLayoutDelegate <NSObject>
 
-- (CGSize)itemSizeInIndexPath:(NSIndexPath *)path;
+/**
+ *
+ *
+ *  @param collectionView 对应的 collectionView
+ *  @param indexPath      坐标
+ *
+ *  @return 坐标对应item的size
+ */
+- (CGSize)itemSizeCollectionView:(UICollectionView *)collectionView indexPath:(NSIndexPath *)indexPath;
+
 
 @end
 
